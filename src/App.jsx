@@ -83,7 +83,7 @@ function App() {
                 quantity: 4,
               },
               repulse: {
-                distance: 200,
+                distance: 100,
                 duration: 0.4,
               },
             },
@@ -114,7 +114,7 @@ function App() {
                 enable: true,
                 area: 800,
               },
-              value: 80,
+              value: 60,
             },
             opacity: {
               value: 0.5,

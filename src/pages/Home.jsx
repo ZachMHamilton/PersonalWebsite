@@ -1,11 +1,9 @@
 import Nav from '../components/nav';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 
 const Home = () => {
   const navigate = useNavigate();
-  const theme = useTheme();
   return (
     <div id="page">
       <Nav></Nav>

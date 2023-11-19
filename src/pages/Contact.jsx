@@ -21,7 +21,7 @@ const Contact = () => {
           }}
         >
           <h1 style={{ color: 'white', fontSize: '5em' }}>
-            Let's work together!
+            Let&apos;s work together!
           </h1>
           <p
             style={{

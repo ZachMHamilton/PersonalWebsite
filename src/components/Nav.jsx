@@ -40,7 +40,7 @@ const Nav = () => {
             >
               Home
             </Typography>
-            <Typography
+            {/* <Typography
               variant="inherit"
               component={Link}
               to="/about"
@@ -53,7 +53,7 @@ const Nav = () => {
               }}
             >
               About
-            </Typography>
+            </Typography> */}
             <Typography
               variant="inherit"
               component={Link}
@@ -66,7 +66,7 @@ const Nav = () => {
                 textDecoration: 'none',
               }}
             >
-              Portfolio
+              My Work
             </Typography>
             <Typography
               variant="inherit"
