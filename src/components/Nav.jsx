@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
