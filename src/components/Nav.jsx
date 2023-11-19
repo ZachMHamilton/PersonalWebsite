@@ -1,6 +1,8 @@
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Nav = () => {
   const theme = useTheme();
@@ -83,7 +85,17 @@ const Nav = () => {
               Contact
             </Typography>
           </div>
-          <div style={{ color: theme.palette.accent.main }}>Zach Hamilton</div>
+          <div style={{ display: 'flex', gap: '1em' }}>
+            <div style={{ color: theme.palette.accent.main }}>
+              Zach Hamilton
+            </div>
+            <a href="https://www.linkedin.com/in/zach-m-hamilton/">
+              <LinkedInIcon sx={{ color: 'white' }} />
+            </a>
+            <a href="https://github.com/ZachMHamilton">
+              <GitHubIcon sx={{ color: 'white' }} />
+            </a>
+          </div>
         </div>
       </Toolbar>
     </AppBar>
