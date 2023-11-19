@@ -15,6 +15,7 @@ const Nav = () => {
         backgroundColor: 'background.main',
         top: 0,
       }}
+      style={{ background: 'transparent', boxShadow: 'none' }}
     >
       <Toolbar>
         <div
