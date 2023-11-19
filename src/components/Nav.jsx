@@ -83,6 +83,7 @@ const Nav = () => {
               Contact
             </Typography>
           </div>
+          <div style={{ color: theme.palette.accent.main }}>Zach Hamilton</div>
         </div>
       </Toolbar>
     </AppBar>

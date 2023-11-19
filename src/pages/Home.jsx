@@ -1,9 +1,11 @@
 import Nav from '../components/nav';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const Home = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
   return (
     <div id="page">
       <Nav></Nav>
@@ -20,9 +22,14 @@ const Home = () => {
         >
           Software Engineer
         </h1>
-        <Button variant="contained" onClick={() => navigate('/contact')}>
-          Get in Touch
-        </Button>
+        <div style={{ display: 'flex', gap: '1em' }}>
+          <Button variant="contained" onClick={() => navigate('/portfolio')}>
+            Check Out My Work
+          </Button>
+          <Button variant="contained" onClick={() => navigate('/contact')}>
+            Get in Touch
+          </Button>
+        </div>
       </div>
     </div>
   );
