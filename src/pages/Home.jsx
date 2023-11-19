@@ -1,4 +1,4 @@
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 

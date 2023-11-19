@@ -1,4 +1,4 @@
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 import { useTheme } from '@mui/material/styles';
 import EastIcon from '@mui/icons-material/East';
 
@@ -72,14 +72,15 @@ const Portfolio = () => {
                 Lambda Peeler
               </h2>
               <p>
-                Lambda Peeler is an open-source, web-based dashboard tailored for AWS Lambda
-                developers. It is meticulously designed to bridge the gap
-                between managing Lambda functions and layers, simplifying AWS
-                cloud operations. It enhances developing efficiency by allowing
-                engineers to test their layer and function compatibilities in
-                bulk. Currently, engineers can only test one-by-one or set up a
-                very robust CI/CD pipeline through AWS. Our product aims to
-                bridge the gap and give engineers an easy-to-use alternative.
+                Lambda Peeler is an open-source, web-based dashboard tailored
+                for AWS Lambda developers. It is meticulously designed to bridge
+                the gap between managing Lambda functions and layers,
+                simplifying AWS cloud operations. It enhances developing
+                efficiency by allowing engineers to test their layer and
+                function compatibilities in bulk. Currently, engineers can only
+                test one-by-one or set up a very robust CI/CD pipeline through
+                AWS. Our product aims to bridge the gap and give engineers an
+                easy-to-use alternative.
               </p>
               <a
                 href="https://lambda-peeler.onrender.com/"

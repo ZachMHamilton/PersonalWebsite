@@ -1,4 +1,4 @@
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
