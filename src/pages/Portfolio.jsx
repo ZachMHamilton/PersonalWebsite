@@ -94,10 +94,10 @@ const Portfolio = () => {
                 Website <EastIcon color={theme.palette.accent.main} />
               </a>
             </div>
-            <img id="gif" src="../src/assets/connecting.gif"></img>
+            <img id="gif" src="/connecting.gif"></img>
           </div>
           <div className="feature">
-            <img id="gif" src="../src/assets/library.png"></img>
+            <img id="gif" src="/library.png"></img>
             <div className="featureDiscription">
               <h2
                 style={{ color: theme.palette.accent.main, fontSize: '2.5em' }}
@@ -152,7 +152,7 @@ const Portfolio = () => {
                 Docs <EastIcon color={theme.palette.accent.main} />
               </a>
             </div>
-            <img id="gif" src="../src/assets/algo.png"></img>
+            <img id="gif" src="/algo.png"></img>
           </div>
         </div>
         <p style={{ textAlign: 'center' }}>
