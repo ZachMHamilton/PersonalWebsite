@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import Nav from '../components/Nav';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
@@ -8,7 +10,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Box from '@mui/material/Box';
 
 const Contact = () => {
-
+  const [state, handleSubmit] = useForm('xoqozbro');
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   const theme = useTheme();
   return (
     <div id="page">
@@ -76,8 +81,7 @@ const Contact = () => {
         </div>
         <Box
           component="form"
-          action='https://formspree.io/f/xoqozbro'
-          method='POST'
+          onSubmit={handleSubmit}
           bgcolor={'background-color: rgba(255,255,255,1);'}
           sx={{
             display: 'flex',
@@ -98,7 +102,7 @@ const Contact = () => {
           >
             <TextField
               required
-              id="outlined-required"
+              id="name"
               label="Full Name"
               name="name"
               color="primary"
@@ -114,10 +118,16 @@ const Contact = () => {
                   color: theme.palette.accent.main,
                 },
               }}
+            />{' '}
+            <ValidationError
+              prefix="Full Name"
+              field="Full Name"
+              errors={state.errors}
             />
             <TextField
               required
-              id="outlined-required"
+              id="email"
+              type="email"
               label="Email"
               name="email"
               color="primary"
@@ -133,8 +143,13 @@ const Contact = () => {
                 },
               }}
             />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
             <TextField
-              id="outlined-required"
+              id="subject"
               label="Subject"
               name="subject"
               color="primary"
@@ -150,13 +165,18 @@ const Contact = () => {
                 },
               }}
             />
+            <ValidationError
+              prefix="Subject"
+              field="subject"
+              errors={state.errors}
+            />
             <div>
               <div style={{ color: 'white', paddingBottom: '1em' }}>
                 Message
               </div>
               <TextField
                 required
-                id="outlined-required"
+                id="message"
                 name="message"
                 color="primary"
                 multiline
@@ -176,11 +196,17 @@ const Contact = () => {
                   },
                 }}
               />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </div>
             <Button
               type="submit"
               color="primary"
               variant="contained"
+              disabled={state.submitting}
               style={{
                 width: '10em',
               }}
