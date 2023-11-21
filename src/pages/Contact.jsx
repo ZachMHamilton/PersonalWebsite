@@ -13,7 +13,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm('xoqozbro');
   let message = 'Send me a message!';
   if (state.succeeded) {
-    message = 'Thanks for reaching out';
+    message = 'Thanks for reaching out!';
   }
   const theme = useTheme();
   return (
