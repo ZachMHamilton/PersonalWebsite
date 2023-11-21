@@ -11,8 +11,9 @@ import Box from '@mui/material/Box';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm('xoqozbro');
+  let message = 'Send me a message!';
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    message = 'Thanks for reaching out';
   }
   const theme = useTheme();
   return (
@@ -91,7 +92,7 @@ const Contact = () => {
             borderRadius: '1em',
           }}
         >
-          <h2 style={{ color: 'white', margin: 0 }}>Send me a message!</h2>
+          <h2 style={{ color: 'white', margin: 0 }}>{message}</h2>
           <div
             style={{
               display: 'flex',
