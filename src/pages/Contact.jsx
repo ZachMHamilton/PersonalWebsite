@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Nav from '../components/Nav';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
@@ -9,42 +8,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Box from '@mui/material/Box';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch(
-        'https://www.zachmhamilton.com/api/contact',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
-  };
 
   const theme = useTheme();
   return (
@@ -113,7 +76,8 @@ const Contact = () => {
         </div>
         <Box
           component="form"
-          onSubmit={handleSubmit}
+          action='https://formspree.io/f/xoqozbro'
+          method='POST'
           bgcolor={'background-color: rgba(255,255,255,1);'}
           sx={{
             display: 'flex',
@@ -137,8 +101,6 @@ const Contact = () => {
               id="outlined-required"
               label="Full Name"
               name="name"
-              value={formData.name}
-              onChange={handleInputChange}
               color="primary"
               InputProps={{
                 style: {
@@ -158,8 +120,6 @@ const Contact = () => {
               id="outlined-required"
               label="Email"
               name="email"
-              value={formData.email}
-              onChange={handleInputChange}
               color="primary"
               InputProps={{
                 style: {
@@ -177,8 +137,6 @@ const Contact = () => {
               id="outlined-required"
               label="Subject"
               name="subject"
-              value={formData.subject}
-              onChange={handleInputChange}
               color="primary"
               InputProps={{
                 style: {
@@ -200,8 +158,6 @@ const Contact = () => {
                 required
                 id="outlined-required"
                 name="message"
-                value={formData.message}
-                onChange={handleInputChange}
                 color="primary"
                 multiline
                 rows={4}
