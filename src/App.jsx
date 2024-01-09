@@ -8,6 +8,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 const theme = createTheme({
   palette: {
